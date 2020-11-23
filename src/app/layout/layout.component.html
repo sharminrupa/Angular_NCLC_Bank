@@ -1,24 +1,24 @@
-<div class="container-fluid" style="width: 100%;">
-    <header>
-        <div class="header">
-            <nav class="navbar navbar-dark sticky-top flex-md-nowrap p-0 shadow">
-                <a class="navbar-brand col-md-3 col-lg-2 mr-0" href="#">NcLC Bank</a>
-                <button class="navbar-toggler position-absolute d-md-none collapsed" type="button"
-                    data-toggle="collapse" data-target="#sidebarMenu" aria-controls="sidebarMenu" aria-expanded="false"
-                    aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <input class="form-control form-control-dark w-100" type="text" placeholder="Search"
-                    aria-label="Search">
-                <ul class="navbar-nav px-3">
-                    <li class="nav-item text-nowrap">
-                        <a class="nav-link" href="#">Sign out</a>
-                    </li>
-                </ul>
-            </nav>
+ <div class="bg-info container-fluid px-0" 
+ style="width: 100%; font-size: 17px; font-weight: bold; height: 45px;">
+    <nav class="navbarStyle">
+        <div class="text-dark">
+          <div class="navbar-header">
+            <a><img src="./assets/img/logo.png" style="width: 42px"></a>
+          </div>
+          <ul class="nav float-left text-dark">
+            <li class="active"><a href="#"  class="text-dark">Home</a></li>
+            <li><a href="#" class="text-dark">Account</a></li>
+            <li><a href="#"  class="text-dark">Customers</a></li>
+          </ul>
+          <ul class="nav float-right">
+            <li><a href="signup" class="btn btn-outline" routerLink="/signup" routerLinkActive="active" class="text-dark"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+            <li><a href="login" routerLink="/login"routerLinkActive="active" class="text-dark"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+          </ul>
         </div>
-    </header>
-    <div class="container-fluid">
+      </nav>
+ </div>
+
+<!-- <div class="container-fluid">
         <div class="row">
             <nav id="sidebarMenu" class="col-md-3 col-lg-2 d-md-block bg-light sidebar collapse">
                 <div class="sidebar-sticky pt-3">
@@ -101,12 +101,12 @@
                 <router-outlet></router-outlet>
             </main>
         </div>
-    </div>
-    
-</div>
+    </div>-->
+
+
 
 <footer class="footer mt-auto py-3">
-    <div class="container">
-        <span class="text-muted">Place sticky footer content here.</span>
-    </div>
+  <div class="container">
+    <span class="text-muted">Place sticky footer content here.</span>
+  </div>
 </footer>
