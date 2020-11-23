@@ -1,9 +1,10 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
+import { CreateComponent } from './account/create/create.component';
+import { EditComponent } from './account/edit/edit.component';
+import { ShowComponent } from './account/show/show.component';
 import { LoginComponent } from './auth/login/login.component';
 import { SignupComponent } from './auth/signup/signup.component';
-import { DashboardComponent } from './dashboard/dashboard.component';
-import { DatabindingComponent } from './databinding/databinding.component';
 import { LayoutComponent } from './layout/layout.component';
 import { PipedemoComponent } from './pipedemo/pipedemo.component';
 import { ProductComponent } from './product/product.component';
@@ -20,27 +21,16 @@ const routes: Routes = [
     path: '',
     component: LayoutComponent,
     children: [
-      {
-        path: '',
-        component: DashboardComponent
-      },
-      {
-        path: 'dashboard',
-        component: DashboardComponent
-      },
-      {
-        path: 'student',
-        component: StudentComponent
-      },
+      {path: 'student', component: StudentComponent},
       {
         path: 'product', component: ProductComponent
       },
       {
-        path: 'data-binding', component: DatabindingComponent
-      },
-      {
         path: 'pipe-example', component: PipedemoComponent
       },
+      {path: 'account/create', component: CreateComponent},
+      {path: 'account/edit', component: EditComponent},
+      {path: 'account/show', component: ShowComponent}
     ]
   },
   {

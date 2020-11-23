@@ -7,13 +7,17 @@ import { ProductComponent } from './product/product.component';
 import { FormsModule } from '@angular/forms';
 import {HttpClientModule} from '@angular/common/http';
 import { LayoutComponent } from './layout/layout.component';
-import { DashboardComponent } from './dashboard/dashboard.component';
 import { StudentComponent } from './student/student.component';
 import { LoginComponent } from './auth/login/login.component';
 import { SignupComponent } from './auth/signup/signup.component';
 import { ToastrModule } from 'ngx-toastr';
-import { DatabindingComponent } from './databinding/databinding.component';
+
 import { PipedemoComponent } from './pipedemo/pipedemo.component';
+import { AboutComponent } from './about/about.component';
+import { AccountComponent } from './account/account.component';
+import { CreateComponent } from './account/create/create.component';
+import { EditComponent } from './account/edit/edit.component';
+import { ShowComponent } from './account/show/show.component';
 
 
 @NgModule({
@@ -21,12 +25,15 @@ import { PipedemoComponent } from './pipedemo/pipedemo.component';
     AppComponent,
     ProductComponent,
     LayoutComponent,
-    DashboardComponent,
     StudentComponent,
     LoginComponent,
     SignupComponent,
-    DatabindingComponent,
-    PipedemoComponent
+    PipedemoComponent,
+    AboutComponent,
+    AccountComponent,
+    CreateComponent,
+    EditComponent,
+    ShowComponent
   ],
   imports: [
     BrowserModule,

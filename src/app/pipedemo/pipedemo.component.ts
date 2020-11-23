@@ -7,7 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PipedemoComponent implements OnInit {
 
-  name: string = 'Shuvin Tanvir';
+ // name: string = 'Shuvin Tanvir';
   birthDate: Date = new Date(1988, 3, 15);
 
   constructor() { }
