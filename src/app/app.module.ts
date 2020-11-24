@@ -15,7 +15,6 @@ import { ToastrModule } from 'ngx-toastr';
 import { PipedemoComponent } from './pipedemo/pipedemo.component';
 import { AboutComponent } from './about/about.component';
 import { AccountComponent } from './account/account.component';
-import { CreateComponent } from './account/create/create.component';
 import { EditComponent } from './account/edit/edit.component';
 import { ShowComponent } from './account/show/show.component';
 
@@ -31,7 +30,6 @@ import { ShowComponent } from './account/show/show.component';
     PipedemoComponent,
     AboutComponent,
     AccountComponent,
-    CreateComponent,
     EditComponent,
     ShowComponent
   ],

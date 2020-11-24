@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { CreateComponent } from './account/create/create.component';
+import { AboutComponent } from './about/about.component';
+import { AccountComponent } from './account/account.component';
 import { EditComponent } from './account/edit/edit.component';
 import { ShowComponent } from './account/show/show.component';
 import { LoginComponent } from './auth/login/login.component';
@@ -11,13 +12,9 @@ import { ProductComponent } from './product/product.component';
 import { StudentComponent } from './student/student.component';
 
 const routes: Routes = [
-  {
-    path: 'login', component: LoginComponent
-  },
-  {
-    path: 'signup', component: SignupComponent
-  },
-  {
+  {path: 'login', component: LoginComponent},
+  {path: 'signup', component: SignupComponent},
+   {
     path: '',
     component: LayoutComponent,
     children: [
@@ -28,7 +25,9 @@ const routes: Routes = [
       {
         path: 'pipe-example', component: PipedemoComponent
       },
-      {path: 'account/create', component: CreateComponent},
+      {path: 'about', component: AboutComponent},
+      {path: 'account', component: AccountComponent},
+      {path: 'show', component: ShowComponent},
       {path: 'account/edit', component: EditComponent},
       {path: 'account/show', component: ShowComponent}
     ]

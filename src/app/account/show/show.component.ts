@@ -6,6 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./show.component.css']
 })
 export class ShowComponent implements OnInit {
+  title = 'Customer Details';
 
   constructor() { }
 
