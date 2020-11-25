@@ -17,6 +17,10 @@ import { AboutComponent } from './about/about.component';
 import { AccountComponent } from './account/account.component';
 import { EditComponent } from './account/edit/edit.component';
 import { ShowComponent } from './account/show/show.component';
+import { ShowService } from './service/show.service';
+import { EmployeeService } from './service/employee.service';
+import { EditService } from './service/edit.service';
+import { AccountService } from './service/account.service';
 
 
 @NgModule({
@@ -31,7 +35,9 @@ import { ShowComponent } from './account/show/show.component';
     AboutComponent,
     AccountComponent,
     EditComponent,
-    ShowComponent
+    ShowComponent,
+    FormsModule,
+    HttpClientModule
   ],
   imports: [
     BrowserModule,
@@ -40,7 +46,7 @@ import { ShowComponent } from './account/show/show.component';
     HttpClientModule,
     ToastrModule.forRoot(),
   ],
-  providers: [],
+  providers: [EmployeeService, EditService, AccountService, ShowService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
