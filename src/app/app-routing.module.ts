@@ -6,6 +6,7 @@ import { EditComponent } from './account/edit/edit.component';
 import { ShowComponent } from './account/show/show.component';
 import { LoginComponent } from './auth/login/login.component';
 import { SignupComponent } from './auth/signup/signup.component';
+import { DashboardComponent } from './Home/dashboard.component';
 import { LayoutComponent } from './layout/layout.component';
 import { PipedemoComponent } from './pipedemo/pipedemo.component';
 import { ProductComponent } from './product/product.component';
@@ -25,15 +26,13 @@ const routes: Routes = [
       {
         path: 'pipe-example', component: PipedemoComponent
       },
+      {path: 'dashbord', component: DashboardComponent},
       {path: 'about', component: AboutComponent},
       {path: 'account', component: AccountComponent},
       {path: 'show', component: ShowComponent},
-      {path: 'account/edit', component: EditComponent},
+      {path: 'edit', component: EditComponent},
       {path: 'account/show', component: ShowComponent}
     ]
-  },
-  {
-    path: '**', redirectTo: 'dashboard'
   },
 ];
 
