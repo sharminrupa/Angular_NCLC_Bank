@@ -13,25 +13,25 @@ import { ProductComponent } from './product/product.component';
 import { StudentComponent } from './student/student.component';
 
 const routes: Routes = [
-  {path: 'login', component: LoginComponent},
-  {path: 'signup', component: SignupComponent},
-   {
+  { path: 'login', component: LoginComponent },
+  { path: 'signup', component: SignupComponent },
+  {
     path: '',
     component: LayoutComponent,
     children: [
-      {path: 'student', component: StudentComponent},
+      { path: '', component: DashboardComponent },
       {
         path: 'product', component: ProductComponent
       },
       {
         path: 'pipe-example', component: PipedemoComponent
       },
-      {path: 'dashbord', component: DashboardComponent},
-      {path: 'about', component: AboutComponent},
-      {path: 'account', component: AccountComponent},
-      {path: 'show', component: ShowComponent},
-      {path: 'edit', component: EditComponent},
-      {path: 'account/show', component: ShowComponent}
+      { path: 'dashbord', component: DashboardComponent },
+      { path: 'about', component: AboutComponent },
+      { path: 'account', component: AccountComponent },
+      { path: 'show', component: ShowComponent },
+      { path: 'edit', component: EditComponent },
+      { path: 'account/show', component: ShowComponent }
     ]
   },
 ];

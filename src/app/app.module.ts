@@ -21,6 +21,7 @@ import { ShowService } from './service/show.service';
 import { EmployeeService } from './service/employee.service';
 import { EditService } from './service/edit.service';
 import { AccountService } from './service/account.service';
+import { RouterModule } from '@angular/router';
 
 
 @NgModule({
@@ -36,8 +37,6 @@ import { AccountService } from './service/account.service';
     AccountComponent,
     EditComponent,
     ShowComponent,
-    FormsModule,
-    HttpClientModule
   ],
   imports: [
     BrowserModule,
