@@ -11,6 +11,9 @@ import { LayoutComponent } from './layout/layout.component';
 import { PipedemoComponent } from './pipedemo/pipedemo.component';
 import { ProductComponent } from './product/product.component';
 import { StudentComponent } from './student/student.component';
+import { SavingComponent } from './transction/saving/saving.component';
+import { TransctionComponent } from './transction/transction.component';
+import { WithdrowComponent } from './transction/withdrow/withdrow.component';
 
 const routes: Routes = [
   { path: 'login', component: LoginComponent },
@@ -31,6 +34,9 @@ const routes: Routes = [
       { path: 'account', component: AccountComponent },
       { path: 'show', component: ShowComponent },
       { path: 'edit', component: EditComponent },
+      { path: 'transction', component: TransctionComponent },
+      { path: 'saving', component: SavingComponent },
+      { path: 'withdrow', component: WithdrowComponent },
       { path: 'account/show', component: ShowComponent }
     ]
   },

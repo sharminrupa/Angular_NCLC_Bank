@@ -1,111 +1,116 @@
-<div>
-  <img src="./assets/img/acc_img.png" style="width: 100%;" alt="">
+<div class="containe py-5">
+  <h1 class="text-center mb-5">{{title}}</h1>
+  <div class="row justify-content-center">
+    <div class="col-md-6">
+      <form>
+        <div class="form-group">
+          <div class="row">
+            <div class="col-md-2">
+              <label for="name">Name: </label>
+            </div>
+            <div class="col-md-10">
+              <input type="name" class="form-control" id="name" name="name">
+            </div>
+          </div>
+        </div>
+        <div class="form-group">
+          <div class="row">
+            <div class="col-md-2">
+              <label for="gender">Gender: </label>
+            </div>
+            <div class="col-md-10">
 
+              <input type="radio" id="Gender" Value="Male" name="nmale">Male
+              <input type="radio" id="Gender" Value="Male" name="fmale">Female
+            </div>
+          </div>
+        </div>
+        <div class="form-group">
+          <div class="row">
+            <div class="col-md-2">
+              <label for="mobile">Mobile: </label>
+            </div>
+            <div class="col-md-10">
+              <input type="mobile" class="form-control" id="mobile" name="mobile">
+            </div>
+          </div>
+        </div>
+        <div class="form-group">
+          <div class="row">
+            <div class="col-md-2">
+              <label for="email">Email: </label>
+            </div>
+            <div class="col-md-10">
+              <input type="email" class="form-control" id="email" name="email">
+            </div>
+          </div>
+        </div>
+        <div class="form-group">
+          <div class="row">
+            <div class="col-md-2">
+              <label for="education">Education: </label>
+            </div>
+            <div class="col-md-10">
+              <input type="education" class="form-control" id="education" name="education" name="education">
+            </div>
+          </div>
+        </div>
+        <div class="form-group">
+          <div class="row">
+            <div class="col-md-2">
+              <label for="date">Date: </label>
+            </div>
+            <div class="col-md-10">
 
-  <div class="containe mt-5 py-5 bg-light" style="font-size: 22px;">
-    <div class="justify-content-center py-5" style="font-size: 25px;">
-      <h1 class="text-center">{{title}}</h1>
-    </div>
-    <div class="row justify-content-center">
-      <div class="col-md-6">
-        <form>
-          <div class="form-group">
-            <div class="row">
-              <div class="col-md-2">
-                <label for="name">Name: </label>
-              </div>
-              <div class="col-md-10">
-                <input type="name" class="form-control" id="name">
-              </div>
+              <input type="date" class="form-control" id="date" name="date">
             </div>
           </div>
-          <div class="form-group">
-            <div class="row">
-              <div class="col-md-2">
-                <label for="mobile">Mobile: </label>
-              </div>
-              <div class="col-md-10">
-                <input type="mobile" class="form-control" id="mobile">
-              </div>
+        </div>       
+        <div class="form-group">
+          <div class="row">
+            <div class="col-md-2">
+              <label for="opebalance">Opening Balance: </label>
+            </div>
+            <div class="col-md-10">
+
+              <input type="text" class="form-control" id="opebalance" name="opebalance">
             </div>
           </div>
-          <div class="form-group">
-            <div class="row">
-              <div class="col-md-2">
-                <label for="email">Email : </label>
-              </div>
-              <div class="col-md-10">
-                <input type="email" class="form-control" id="email">
-              </div>
+        </div> 
+
+      
+        <div class="form-group">
+          <div class="row">
+            <div class="col-md-2">
+              <label for="file">Image: </label>
+            </div>
+            <div class="col-md-10">
+              <input type="file" id="file" name="file">
             </div>
           </div>
-          <div class="form-group">
-            <div class="row">
-              <div class="col-md-2">
-                <label for="gender">Gender: </label>
-              </div>
-              <div class="col-md-10">
-  
-                <input type="radio" id="Gender" Value="Male">Male
-                <input type="radio" id="Gender" Value="Male">Female
-              </div>
+        </div>
+       
+        <div class="form-group">
+          <div class="row">
+            <div class="col-md-2">
+              <label for="email">Address: </label>
+
+            </div>
+            <div class="col-md-10">
+              <Textarea class="form-control"></Textarea>
             </div>
           </div>
-          <div class="form-group">
-            <div class="row">
-              <div class="col-md-2">
-  
-                <label for="Skill">Skill: </label>
-              </div>
-              <div class="col-md-10">
-  
-                <input type="checkbox" id="Skill" Value="MBA">BBA
-                <input type="checkbox" id="skill" Value="BBA">MBA
-              </div>
+        </div>
+       
+        <div class="form-group">
+          <div class="row">
+            <div class="col-md-2"></div>
+            <div class="col-md-10 justify-content-center">
+              <a class="btn btn-success btn-lg" routerLink="/show" routerLinkActve="active">Signup</a>
             </div>
           </div>
-          <div class="form-group">
-            <div class="row">
-              <div class="col-md-2">
-                <label for="date">Date: </label>
-              </div>
-              <div class="col-md-10">
-  
-                <input type="date" class="form-control" id="date">
-              </div>
-            </div>
-          </div>
-          <div class="form-group">
-            <div class="row">
-              <div class="col-md-2">
-                <label for="email">Address: </label>
-  
-              </div>
-              <div class="col-md-10">
-                <Textarea class="form-control"></Textarea>
-              </div>
-            </div>
-          </div>
-          <div class="form-group form-check">
-            <div class="row">
-              <div class="col-md-2"></div>
-              <div class="col-md-10">
-                <input type="checkbox" class="form-check-input" id="exampleCheck1">
-                <label class="form-check-label" for="exampleCheck1">Check me out</label>
-              </div>
-            </div>
-          </div>
-          <div class="form-group">
-            <div class="row">
-              <div class="col-md-2"></div>
-              <div class="col-md-10 justify-content-center">
-                <a class="btn btn-success btn-lg" routerLink="/show" routerLinkActve="active">Create Account</a>
-              </div>
-            </div>
-          </div>
-        </form>
-      </div>
+        </div>
+      </form>
     </div>
   </div>
-  
 </div>

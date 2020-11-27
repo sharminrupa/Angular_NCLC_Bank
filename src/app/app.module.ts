@@ -22,6 +22,12 @@ import { EmployeeService } from './service/employee.service';
 import { EditService } from './service/edit.service';
 import { AccountService } from './service/account.service';
 import { RouterModule } from '@angular/router';
+import { TransctionComponent } from './transction/transction.component';
+import { TransctionService } from './service/transction.service';
+import { SavingComponent } from './transction/saving/saving.component';
+import { WithdrowComponent } from './transction/withdrow/withdrow.component';
+import { SavingService } from './service/saving.service';
+import { WithdrowService } from './service/withdrow.service';
 
 
 @NgModule({
@@ -37,6 +43,9 @@ import { RouterModule } from '@angular/router';
     AccountComponent,
     EditComponent,
     ShowComponent,
+    TransctionComponent,
+    SavingComponent,
+    WithdrowComponent,
   ],
   imports: [
     BrowserModule,
@@ -45,7 +54,7 @@ import { RouterModule } from '@angular/router';
     HttpClientModule,
     ToastrModule.forRoot(),
   ],
-  providers: [EmployeeService, EditService, AccountService, ShowService],
+  providers: [EmployeeService, EditService, AccountService, ShowService, TransctionService, SavingService, WithdrowService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
