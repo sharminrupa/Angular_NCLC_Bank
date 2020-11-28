@@ -8,7 +8,7 @@ import { ShowService } from 'src/app/service/show.service';
   styleUrls: ['./show.component.css']
 })
 export class ShowComponent implements OnInit {
-  accountList: Show[] = [];
+  accountList: Account[] = [];
   title = 'Customer Details';
 
   constructor(private show: ShowService) { }
@@ -18,7 +18,11 @@ export class ShowComponent implements OnInit {
   }
 
   getAccountList(keyword){
-    this.show.getAccountList(keyword).subscribe(data => this.accountList = data);
+    this.show.getAccountList(keyword).subscribe(data => {
+      this.accountList = data;
+      console.log(this.accountList);
+      
+    });
   }
 
 }

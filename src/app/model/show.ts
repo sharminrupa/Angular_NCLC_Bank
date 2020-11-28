@@ -3,16 +3,16 @@ id: number;
 name: string;
 gender: string;
 mobile: string;
-adderss: number;
+address: number;
 date: string;
 openingbalance: string;
 
-    constructor(id, name, gender, mobile, adderss, date, openingbalance){
+    constructor(id, name, gender, mobile, address, date, openingbalance){
         this.id = id;
         this.name = name;
         this.gender = gender;
         this.mobile = mobile;
-        this.adderss = adderss;
+        this.address = address;
         this.date = date;
         this.openingbalance = openingbalance;
     }
