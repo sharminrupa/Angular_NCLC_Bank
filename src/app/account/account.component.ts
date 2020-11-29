@@ -7,7 +7,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AccountComponent implements OnInit {
   title = 'Create a new customer account';
-  constructor() { }
+  account;
+    constructor() { }
 
   ngOnInit(): void {
   }

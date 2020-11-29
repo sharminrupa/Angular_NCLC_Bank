@@ -1,17 +1,18 @@
 export class Employee{
-id: string;
+id: number;
 name: string;
 gender: string;
 mobile: string;
 email: string;
 education: string;
-date: Date;
+date: string;
 skill: string;
 post: string;
-img: string;
+image: string;
 address: string;
+password: string;
 
-constructor(id, name, gender, mobile, email, education, date, skill, post, address){
+constructor(id, name, gender, mobile, email, education, date, skill, post, image, address, password){
     this.id = id;
     this.name = name;
     this.gender = gender;
@@ -20,8 +21,10 @@ constructor(id, name, gender, mobile, email, education, date, skill, post, addre
     this.education = education;
     this.date = date;
     this.skill = skill;
+    this.image = image;
     this.post = post;
     this.address = address;
+    this.password = password;
 }
 
 }

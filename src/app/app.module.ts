@@ -28,6 +28,7 @@ import { SavingComponent } from './transction/saving/saving.component';
 import { WithdrowComponent } from './transction/withdrow/withdrow.component';
 import { SavingService } from './service/saving.service';
 import { WithdrowService } from './service/withdrow.service';
+import { UserService } from './service/user.service';
 
 
 @NgModule({
@@ -54,7 +55,7 @@ import { WithdrowService } from './service/withdrow.service';
     HttpClientModule,
     ToastrModule.forRoot(),
   ],
-  providers: [EmployeeService, EditService, AccountService, ShowService, TransctionService, SavingService, WithdrowService],
+  providers: [EmployeeService, EditService, AccountService, ShowService, TransctionService, SavingService, WithdrowService, UserService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

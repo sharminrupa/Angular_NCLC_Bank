@@ -6,6 +6,7 @@ import { EditComponent } from './account/edit/edit.component';
 import { ShowComponent } from './account/show/show.component';
 import { LoginComponent } from './auth/login/login.component';
 import { SignupComponent } from './auth/signup/signup.component';
+import { LoginGuardGuard } from './guard/login-guard.guard';
 import { DashboardComponent } from './Home/dashboard.component';
 import { LayoutComponent } from './layout/layout.component';
 import { PipedemoComponent } from './pipedemo/pipedemo.component';
@@ -21,6 +22,7 @@ const routes: Routes = [
   {
     path: '',
     component: LayoutComponent,
+    canActivate: [LoginGuardGuard],
     children: [
       { path: '', component: DashboardComponent },
       {

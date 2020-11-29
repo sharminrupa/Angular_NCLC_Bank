@@ -17,11 +17,10 @@ export class ShowComponent implements OnInit {
     this.getAccountList('');
   }
 
-  getAccountList(keyword){
+  getAccountList(keyword): any{
     this.show.getAccountList(keyword).subscribe(data => {
       this.accountList = data;
       console.log(this.accountList);
-      
     });
   }
 
