@@ -30,10 +30,7 @@
             ],
             "scripts": [
               "src/assets/js/jquery-3.5.1.slim.min.js",
-              "src/assets/js/bootstrap.bundle.min.js",
-              "src/assets/js/feather.min.js",
-              "src/assets/js/Chart.min.js",
-              "src/assets/js/dashboard.js"
+              "src/assets/js/bootstrap.bundle.min.js"              
             ]
           },
           "configurations": {

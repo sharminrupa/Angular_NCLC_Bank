@@ -1,4 +1,11 @@
+import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
+import { Observable } from 'rxjs';
+import { Ttransction } from '../model/saving';
+import { TransctionService } from '../service/transction.service';
+
+
+
 
 @Component({
   selector: 'app-transction',
@@ -7,9 +14,22 @@ import { Component, OnInit } from '@angular/core';
 })
 export class TransctionComponent implements OnInit {
   title = 'Account Transction';
-  constructor() { }
+  keyword: string = '';
+  transtactionList: Ttransction[] = [];
+
+    constructor(private ts: TransctionService) { }
 
   ngOnInit(): void {
+    this.getTranstactionList('');
+  }
+
+  getTranstactionList(keyword): void{
+  this.ts.getTranstactionList(keyword).subscribe(data => this.transtactionList = data);
+
+  }
+
+  searchKeyword(){
+    this.getTranstactionList(this.keyword);
   }
 
 }

@@ -2,14 +2,24 @@
   <h1 class="text-center mb-5">{{title}}</h1>
   <div class="row justify-content-center">
     <div class="col-md-6">
-      <form>
+      <form (ngSubmit)="update()" #signUp="ngForm" >
+        <div class="form-group">
+          <div class="row">
+            <div class="col-md-2">
+              <label for="id">ID: </label>
+            </div>
+            <div class="col-md-10">
+              <input [(ngModel)]="accedit.id" type="id" class="form-control" id="id" name="id">
+            </div>
+          </div>
+        </div>
         <div class="form-group">
           <div class="row">
             <div class="col-md-2">
               <label for="name">Name: </label>
             </div>
             <div class="col-md-10">
-              <input type="name" class="form-control" id="name" name="name">
+              <input [(ngModel)]="accedit.name" type="name" class="form-control" id="name" name="name">
             </div>
           </div>
         </div>
@@ -19,9 +29,8 @@
               <label for="gender">Gender: </label>
             </div>
             <div class="col-md-10">
-
-              <input type="radio" id="Gender" Value="Male" name="nmale">Male
-              <input type="radio" id="Gender" Value="Male" name="fmale">Female
+              <input [(ngModel)]="accedit.gender" type="radio" id="gender" name="male" value="Male"> Male 
+              <input [(ngModel)]="accedit.gender" type="radio" id="gender" name="female" value="Female"> Female
             </div>
           </div>
         </div>
@@ -31,65 +40,11 @@
               <label for="mobile">Mobile: </label>
             </div>
             <div class="col-md-10">
-              <input type="mobile" class="form-control" id="mobile" name="mobile">
+              <input  [(ngModel)]="accedit.mobile" type="mobile" class="form-control" id="mobile" name="mobile">
             </div>
           </div>
         </div>
-        <div class="form-group">
-          <div class="row">
-            <div class="col-md-2">
-              <label for="email">Email: </label>
-            </div>
-            <div class="col-md-10">
-              <input type="email" class="form-control" id="email" name="email">
-            </div>
-          </div>
-        </div>
-        <div class="form-group">
-          <div class="row">
-            <div class="col-md-2">
-              <label for="education">Education: </label>
-            </div>
-            <div class="col-md-10">
-              <input type="education" class="form-control" id="education" name="education" name="education">
-            </div>
-          </div>
-        </div>
-        <div class="form-group">
-          <div class="row">
-            <div class="col-md-2">
-              <label for="date">Date: </label>
-            </div>
-            <div class="col-md-10">
-
-              <input type="date" class="form-control" id="date" name="date">
-            </div>
-          </div>
-        </div>       
-        <div class="form-group">
-          <div class="row">
-            <div class="col-md-2">
-              <label for="opebalance">Opening Balance: </label>
-            </div>
-            <div class="col-md-10">
-
-              <input type="text" class="form-control" id="opebalance" name="opebalance">
-            </div>
-          </div>
-        </div> 
-
-      
-        <div class="form-group">
-          <div class="row">
-            <div class="col-md-2">
-              <label for="file">Image: </label>
-            </div>
-            <div class="col-md-10">
-              <input type="file" id="file" name="file">
-            </div>
-          </div>
-        </div>
-       
+        
         <div class="form-group">
           <div class="row">
             <div class="col-md-2">
@@ -97,16 +52,39 @@
 
             </div>
             <div class="col-md-10">
-              <Textarea class="form-control"></Textarea>
+              <textarea [(ngModel)]="accedit.address" class="form-control" id="address" name="address"></textarea>
             </div>
           </div>
         </div>
-       
+        
+        
+        <div class="form-group">
+          <div class="row">
+            <div class="col-md-2">
+              <label for="date">Date: </label>
+            </div>
+            <div class="col-md-10">
+
+              <input [(ngModel)]="accedit.date" type="date" class="form-control" id="date" name="date">
+            </div>
+          </div>
+        </div>
+        <div class="form-group">
+          <div class="row">
+            <div class="col-md-2">
+              <label for="balance">Balance: </label>
+            </div>
+            <div class="col-md-10">
+              <input [(ngModel)]="accedit.balance" type="text" class="form-control" id="balance" name="balance">
+            </div>
+          </div>
+        </div>
+        
         <div class="form-group">
           <div class="row">
             <div class="col-md-2"></div>
             <div class="col-md-10 justify-content-center">
-              <a class="btn btn-success btn-lg" routerLink="/show" routerLinkActve="active">Signup</a>
+              <button class="btn btn-success btn-lg" type="update">Update</button>
             </div>
           </div>
         </div>

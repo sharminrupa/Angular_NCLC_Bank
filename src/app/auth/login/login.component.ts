@@ -10,7 +10,7 @@ import { UserService } from 'src/app/service/user.service';
 })
 export class LoginComponent implements OnInit {
 
-  employee:Employee = new Employee(0, '', '', '', '', '', '', '', '', '', '', '');
+  employee: Employee = new Employee('', '', '', '', '', '', '');
   constructor(private userService: UserService) { }
 
   ngOnInit(): void {

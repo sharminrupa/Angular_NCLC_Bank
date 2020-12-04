@@ -24,8 +24,8 @@
     <form class="form-inline mt-2" style="font-size: 25px;">
       <div class="col-md-10"></div>
       <div class="col-md-2 d-flex" style="font-size: 25px;">
-        <input class="form-control" type="text" placeholder="Search" aria-label="Search">
-        <button class="btn btn-outline-success" type="submit">Search</button>
+        <input [(ngModel)]="keyword" name="keyword" (input)="searchKeyword()" class="form-control" type="text" placeholder="Search" aria-label="Search">
+        <button class="btn btn-outline-success" type="submit" id="search-data" (click)="searchKeyword()">Search</button>
       </div>
 
     </form>
@@ -42,13 +42,13 @@
           <th>Date</th>
         </tr>
       </thead>
-      <tr>
-        <td>123</td>
-        <td>1257958</td>
-        <td>Sharmin Akter</td>
-        <td>01679628774</td>
-        <td>30,0000.00</td>
-        <td>24/11/2020</td>
+      <tr *ngFor = "let trans of transtactionList">
+        <td>{{trans.id}}</td>
+        <td>{{trans.accno}}</td>
+        <td>{{trans.name}}</td>
+        <td>{{trans.mobile}}</td>
+        <td>{{trans.balance}}</td>
+        <td>{{trans.date}}</td>
       </tr>
     </table>
   </div>

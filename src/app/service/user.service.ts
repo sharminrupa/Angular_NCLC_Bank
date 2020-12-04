@@ -36,9 +36,5 @@ logout(): void{
   localStorage.removeItem('auth_email');
   localStorage.removeItem('isCrudAppLoggedIn');
 }
-  saveUser(entity): Observable<Employee>{
-      const res = this.http.post<Employee>(this.baseUrl + '/save', entity);
-      return res;
-  }
 
 }

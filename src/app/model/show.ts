@@ -5,15 +5,15 @@ gender: string;
 mobile: string;
 address: number;
 date: string;
-openingbalance: string;
+balance: string;
 
-    constructor(id, name, gender, mobile, address, date, openingbalance){
+    constructor(id, name, gender, mobile, address, date, balance){
         this.id = id;
         this.name = name;
         this.gender = gender;
         this.mobile = mobile;
         this.address = address;
         this.date = date;
-        this.openingbalance = openingbalance;
+        this.balance = balance;
     }
 }

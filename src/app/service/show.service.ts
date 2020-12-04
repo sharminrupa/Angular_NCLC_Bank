@@ -11,7 +11,7 @@ export class ShowService {
   constructor(private http: HttpClient) { }
 
   getAccountList(keyword): Observable<Account[]>{
-    return this.http.get<Account[]>('http://localhost:8080/account');
+    return this.http.get<Account[]>('http://localhost:8080/account/list');
   }
 
 }

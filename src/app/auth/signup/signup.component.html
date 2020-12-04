@@ -2,26 +2,14 @@
   <h1 class="text-center mb-5">{{title}}</h1>
   <div class="row justify-content-center">
     <div class="col-md-6">
-      <form #signUp = "ngForm" (ngSubmit)="submit()">
+      <form (ngSubmit)="save()" #signUp="ngForm" >
         <div class="form-group">
           <div class="row">
             <div class="col-md-2">
               <label for="name">Name: </label>
             </div>
             <div class="col-md-10">
-              <input type="name" class="form-control" id="name" name="name" [(ngModel)]="employee.name">
-            </div>
-          </div>
-        </div>
-        <div class="form-group">
-          <div class="row">
-            <div class="col-md-2">
-              <label for="gender">Gender: </label>
-            </div>
-            <div class="col-md-10">
-
-              <input type="radio" id="Gender" Value="Male" name="gender" [(ngModel)]="employee.gender">Male
-              <input type="radio" id="Gender" Value="Male" name="gender" [(ngModel)]="employee.gender">Female
+              <input [(ngModel)]="employee.name" type="name" class="form-control" id="name" name="name">
             </div>
           </div>
         </div>
@@ -31,7 +19,7 @@
               <label for="mobile">Mobile: </label>
             </div>
             <div class="col-md-10">
-              <input type="mobile" class="form-control" id="mobile" name="mobile" [(ngModel)]="employee.mobile">
+              <input  [(ngModel)]="employee.mobile" type="mobile" class="form-control" id="mobile" name="mobile">
             </div>
           </div>
         </div>
@@ -41,7 +29,7 @@
               <label for="email">Email: </label>
             </div>
             <div class="col-md-10">
-              <input type="email" class="form-control" id="email" name="name" [(ngModel)]="employee.email">
+              <input [(ngModel)]="employee.email" type="email" class="form-control" id="email" name="name">
             </div>
           </div>
         </div>
@@ -52,20 +40,7 @@
             </div>
             <div class="col-md-10">
 
-              <input type="date" class="form-control" id="date" name="date" [(ngModel)]="employee.date">
-            </div>
-          </div>
-        </div>       
-        <div class="form-group">
-          <div class="row">
-            <div class="col-md-2">
-
-              <label for="Skill">Skill: </label>
-            </div>
-            <div class="col-md-10">
-
-              <input type="checkbox" id="skill" Value="MBA" name="skill" [(ngModel)]="employee.skill">BBA
-              <input type="checkbox" id="skill" Value="BBA" name="skill" [(ngModel)]="employee.skill">MBA
+              <input [(ngModel)]="employee.date" type="date" class="form-control" id="date" name="date">
             </div>
           </div>
         </div>
@@ -76,22 +51,10 @@
               <label for="post">Post: </label>
             </div>
             <div class="col-md-10">
-              <input type="post" class="form-control" id="post" name="post" [(ngModel)]="employee.post">
+              <input [(ngModel)]="employee.post" type="post" class="form-control" id="post" name="post">
             </div>
           </div>
         </div>
-
-        <div class="form-group">
-          <div class="row">
-            <div class="col-md-2">
-              <label for="file">Image: </label>
-            </div>
-            <div class="col-md-10">
-              <input type="file" id="file" name="file" [(ngModel)]="employee.file">
-            </div>
-          </div>
-        </div>
-       
         <div class="form-group">
           <div class="row">
             <div class="col-md-2">
@@ -99,27 +62,25 @@
 
             </div>
             <div class="col-md-10">
-              <Textarea class="form-control" id="address" name="address" [(ngModel)]="employee.address"></Textarea>
+              <textarea [(ngModel)]="employee.address" class="form-control" id="address" name="address"></textarea>
             </div>
           </div>
         </div>
-
         <div class="form-group">
           <div class="row">
             <div class="col-md-2">
               <label for="password">Password: </label>
             </div>
             <div class="col-md-10">
-              <input type="post" class="form-control" id="password" name="password" [(ngModel)]="employee.password">
+              <input [(ngModel)]="employee.password" class="form-control" id="password" name="password">
             </div>
           </div>
         </div>
-       
         <div class="form-group">
           <div class="row">
             <div class="col-md-2"></div>
             <div class="col-md-10 justify-content-center">
-              <a class="btn btn-success btn-lg" routerLink="/login" routerLinkActve="active">Signup</a>
+              <button class="btn btn-success btn-lg" type="submit">Submit</button>
             </div>
           </div>
         </div>

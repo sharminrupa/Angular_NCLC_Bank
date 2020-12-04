@@ -55,7 +55,7 @@ import { UserService } from './service/user.service';
     HttpClientModule,
     ToastrModule.forRoot(),
   ],
-  providers: [EmployeeService, EditService, AccountService, ShowService, TransctionService, SavingService, WithdrowService, UserService],
+  providers: [EmployeeService, EditService, AccountService, ShowService, SavingService, WithdrowService, TransctionService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

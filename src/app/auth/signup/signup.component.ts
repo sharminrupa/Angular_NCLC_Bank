@@ -1,3 +1,4 @@
+import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { Employee } from 'src/app/model/bankemployee';
 import { UserService } from 'src/app/service/user.service';
@@ -11,22 +12,16 @@ import { UserService } from 'src/app/service/user.service';
 })
 export class SignupComponent implements OnInit {
 title = 'This is employee registation page';
-employee;
-isSubmitted = false;
+employee: Employee = new Employee('', '', '', '', '', '', '');
 
-constructor(private userService: UserService) {
-  this.employee = new Employee(0, '', '', '', '', '', '', '', '', '', '', '');
- }
+constructor(private http: HttpClient) { }
 
   ngOnInit(): void {
   }
-
-  submit(): void{
-    this.userService.saveUser(this.employee)
-    .subscribe(employee => {
-      console.log(employee);
+  save(): void{
+    this.http.post<Employee>('http://localhost:8080/save', this.employee)
+    .subscribe( data => {
+      console.log('save successfull');
     });
-    this.isSubmitted = true;
   }
-
 }
