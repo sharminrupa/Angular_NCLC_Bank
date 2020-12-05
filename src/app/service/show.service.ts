@@ -14,4 +14,8 @@ export class ShowService {
     return this.http.get<Account[]>('http://localhost:8080/account/list');
   }
 
+  edit(id){
+    return this.http.get('http://localhost:8080/account/one/' + id);
+  }
+
 }

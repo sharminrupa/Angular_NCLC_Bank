@@ -35,8 +35,8 @@
         <td>{{item.date}}</td>
         <td>{{item.balance}}</td>
         <td>
-          <a class="btn btn-success" routerLink='/edit' routerLinkActive="active">Edit</a> |
-          <a class="btn btn-danger">Delete</a>
+          <a class="btn btn-success" (click)="edit(item.id)" routerLink='/edit' routerLinkActive="active">Edit</a> |
+          <a class="btn btn-danger"  (click)="delete(item.id)" >Delete</a>
         </td>
       </tr>
     </table>
