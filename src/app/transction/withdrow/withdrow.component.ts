@@ -6,7 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./withdrow.component.css']
 })
 export class WithdrowComponent implements OnInit {
-  title = 'Withdrow your balance';
+  title = 'Withdrow Your Balance';
   constructor() { }
 
   ngOnInit(): void {

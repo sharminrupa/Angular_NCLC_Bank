@@ -1,48 +1,54 @@
-<div class="containe py-5">
-    <div>
-        <h1 class="text-center">{{title}}</h1>
-    </div>
-    <div class="row justify-content-center mt-5">
-      <div class="col-md-4">
-        <form>
-          <div class="form-group">
+<div>
+  <img src="./assets/img/saving.jpg" class="d-block w-100" alt="...">
+  <div class="carousel-caption d-none d-md-block">
+    <h1 class="text-center" style="margin-top: -300px; margin-bottom: 100px;">{{title}}</h1>    
+  </div>
+
+
+<div class="containe">
+    
+    <div class="row justify-content-center mt-5" >
+        <div class="col-md-6" style="margin-top: -650px;">
+          <form  (ngSubmit)="update()"  #signUp>
+            <div class="form-group">
+              <div class="row">
+                <div class="col-md-3">
+                  <label for="accno">Account No: </label>
+                </div>
+                <div class="col-md-9">
+                  <input [(ngModel)]="transction.accno" type="accno" class="form-control" id="accno" name="accno" placeholder="Please enter your account number">
+                </div>
+              </div>
+            </div>
+            <div class="form-group">
+              <div class="row">
+                <div class="col-md-3">
+                  <label for="amount">Amount: </label>
+                </div>
+                <div class="col-md-9">
+                  <input [(ngModel)]="transction.balance" type="amount" class="form-control" id="amount" name="amount" placeholder="Please enter your amount">
+                </div>
+              </div>           
+            </div>
+            <div class="form-group">
+              <div class="row">
+                <div class="col-md-3">
+                  <label for="date">Date: </label>
+                </div>
+                <div class="col-md-9">
+                  <input type="date" class="form-control" id="date" name="date">
+                </div>
+              </div>           
+            </div>
             <div class="row">
-              <div class="col-md-2">
-                <label for="accno">Account No: </label>
-              </div>
-              <div class="col-md-10">
-                <input type="accno" class="form-control" id="accno" name="accno">
+              <div class="col-md-3"></div>
+              <div class="col-md-9">
+                <button class="btn btn-success btn-lg btn-block" type="update">Saving</button>              
               </div>
             </div>
-          </div>
-          <div class="form-group">
-            <div class="row">
-              <div class="col-md-2">
-                <label for="amount">Amount: </label>
-              </div>
-              <div class="col-md-10">
-                <input type="amount" class="form-control" id="amount" name="amount">
-              </div>
-            </div>
-           
-          </div>
-          <div class="form-group form-check">
-           <div class="row">
-             <div class="col-md-2"></div>
-             <div class="col-md-10">
-              <input type="checkbox" class="form-check-input" id="exampleCheck1">
-              <label class="form-check-label" for="exampleCheck1"> Check me out</label>
-             </div>
-           </div>
-          </div>
-          <div class="row">
-            <div class="col-md-2"></div>
-            <div class="col-md-10">
-              <a class="btn btn-primary" routerLink='/transction' routerLinkActive="active">Login</a>
-            </div>
-          </div>
-        </form>
-      </div>
+          </form> 
+        </div>
+            
     </div>
   </div>
-  
+</div>

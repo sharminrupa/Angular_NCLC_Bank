@@ -1,0 +1,21 @@
+input{
+    font-size: 20px;
+    color: #000;
+}
+
+button{
+    font-size: 20px;
+}
+
+textarea{
+    font-size: 20px;
+}
+
+*{
+    color: white;
+}
+
+h1{
+    font-size: 50px;
+    margin-bottom: 70px;;
+}

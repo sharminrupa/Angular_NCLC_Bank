@@ -14,7 +14,7 @@ account: Account;
   accountList: Account[] = [];
   title = 'Customer Details';
  sho: Show = new Show(0, '', '', '', '', '', '');
-  constructor(private show: ShowService, private http: HttpClient) { }
+  constructor(private show: ShowService) { }
 
   ngOnInit(): void {
     this.getAccountList('');
@@ -33,7 +33,7 @@ account: Account;
   }
 
   delete(id){
-    console.log("id::::::::::::::::" + id);
+    this.show.delete(id).subscribe(data => this.delete);
 
   }
 

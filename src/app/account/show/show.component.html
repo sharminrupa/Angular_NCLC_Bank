@@ -1,11 +1,15 @@
+
+<div>
+  <img src="./assets/img/family_img.png" style="width: 100%;" alt="">
+</div> 
 <div style="width: 100%;">
   <div class="text-center pt-5">
     <h1>{{title}}</h1>
   </div>
   <div class="py-5">
     <form class="form-inline mt-2" style="font-size: 25px;">
-      <div class="col-md-10"></div>
-      <div class="col-md-2 d-flex" id="search" style="font-size: 25px;">
+      <div class="col-md-9"></div>
+      <div class="col-md-3 d-flex" id="search">
         <input class="form-control" type="text" placeholder="Search" name="search">
         <button class="btn btn-outline-success" type="submit">Search</button>
       </div>
@@ -33,10 +37,10 @@
         <td>{{item.mobile}}</td>
         <td>{{item.address}}</td>
         <td>{{item.date}}</td>
-        <td>{{item.balance}}</td>
-        <td>
-          <a class="btn btn-success" (click)="edit(item.id)" routerLink='/edit' routerLinkActive="active">Edit</a> |
-          <a class="btn btn-danger"  (click)="delete(item.id)" >Delete</a>
+        <td>{{item.openingbalance}}</td>
+        <td class="text-center">
+          <a class="btn btn-success" [routerLink]="['/edit', item.id]" style="font-size: 20px;">Edit</a> |
+          <a class="btn btn-danger"  (click)="delete(item.id)" style="font-size: 20px;">Delete</a>
         </td>
       </tr>
     </table>

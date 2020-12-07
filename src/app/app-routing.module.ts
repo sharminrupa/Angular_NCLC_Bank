@@ -34,7 +34,7 @@ const routes: Routes = [
       { path: 'about', component: AboutComponent },
       { path: 'account', component: AccountComponent },
       { path: 'show', component: ShowComponent },
-      { path: 'edit', component: EditComponent },
+      { path: 'edit/:id', component: EditComponent },
       { path: 'transction', component: TransctionComponent },
       { path: 'saving', component: SavingComponent },
       { path: 'withdrow', component: WithdrowComponent },

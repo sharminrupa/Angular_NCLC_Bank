@@ -5,15 +5,15 @@ export class AccEdit{
     mobile: string;
     address: string;
     date: string;
-    balance: string;
+    openingbalance: string;
 
-    constructor(id, name, gender, mobile, address, date, balance){
+    constructor(id, name, gender, mobile, address, date, openingbalance){
             this.id = id;
             this.name = name;
             this.gender = gender;
             this.mobile = mobile;
             this.address = address;
             this.date = date;
-            this.balance = balance;
+            this.openingbalance = openingbalance;
         }
     }

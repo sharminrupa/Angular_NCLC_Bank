@@ -16,7 +16,7 @@ export class TransctionComponent implements OnInit {
   title = 'Account Transction';
   keyword: string = '';
   transtactionList: Ttransction[] = [];
-
+  transction: Ttransction = new Ttransction(0, 0, '', '', 0, '');
     constructor(private ts: TransctionService) { }
 
   ngOnInit(): void {

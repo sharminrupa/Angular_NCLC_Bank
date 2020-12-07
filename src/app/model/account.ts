@@ -1,4 +1,5 @@
 export class Account{
+    id: string;
     name: string;
     gender: string;
     mobile: string;
@@ -6,9 +7,10 @@ export class Account{
     education: string;
     acctype: string;
     date: string;
-    balance: number;
+    openingbalance: number;
     address: string;
-    constructor(name, gender, mobile, email, education, acctype, date, balance, address){
+    constructor(id, name, gender, mobile, email, education, acctype, date, openingbalance, address){
+        this.id = id;
         this.name = name;
         this.gender = gender;
         this.mobile = mobile;
@@ -16,7 +18,7 @@ export class Account{
         this.education = education;
         this.acctype = acctype;
         this.date = date;
-        this.balance = balance;
+        this.openingbalance = openingbalance;
         this.address = address;
     }
 

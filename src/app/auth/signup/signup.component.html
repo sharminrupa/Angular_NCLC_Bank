@@ -1,15 +1,21 @@
-<div class="containe py-5">
-  <h1 class="text-center mb-5">{{title}}</h1>
+<div class="carousel-item active">
+  <img src="./assets/img/signup.jpg" class="d-block w-100" alt="...">
+  <div class="carousel-caption d-none d-md-block">
+    <h1 class="text-center" style="margin-top: -650px;">{{title}}</h1>    
+  </div>
+</div>
+
+<div class="containe py-5">  
   <div class="row justify-content-center">
     <div class="col-md-6">
-      <form (ngSubmit)="save()" #signUp="ngForm" >
+      <form (ngSubmit)="save()" #signUp="ngForm" style="margin-top: 250px;" >
         <div class="form-group">
           <div class="row">
             <div class="col-md-2">
               <label for="name">Name: </label>
             </div>
             <div class="col-md-10">
-              <input [(ngModel)]="employee.name" type="name" class="form-control" id="name" name="name">
+              <input [(ngModel)]="employee.name" type="name" class="form-control" id="name" name="name" placeholder="Please enter your name">
             </div>
           </div>
         </div>
@@ -19,7 +25,7 @@
               <label for="mobile">Mobile: </label>
             </div>
             <div class="col-md-10">
-              <input  [(ngModel)]="employee.mobile" type="mobile" class="form-control" id="mobile" name="mobile">
+              <input  [(ngModel)]="employee.mobile" type="mobile" class="form-control" id="mobile" name="mobile" placeholder="Please enter your mobile number">
             </div>
           </div>
         </div>
@@ -29,7 +35,7 @@
               <label for="email">Email: </label>
             </div>
             <div class="col-md-10">
-              <input [(ngModel)]="employee.email" type="email" class="form-control" id="email" name="name">
+              <input [(ngModel)]="employee.email" type="email" class="form-control" id="email" name="email" placeholder="Please enter your email">
             </div>
           </div>
         </div>
@@ -40,7 +46,7 @@
             </div>
             <div class="col-md-10">
 
-              <input [(ngModel)]="employee.date" type="date" class="form-control" id="date" name="date">
+              <input [(ngModel)]="employee.date" type="date" class="form-control" id="date" name="date" placeholder="Please enter select date">
             </div>
           </div>
         </div>
@@ -51,7 +57,7 @@
               <label for="post">Post: </label>
             </div>
             <div class="col-md-10">
-              <input [(ngModel)]="employee.post" type="post" class="form-control" id="post" name="post">
+              <input [(ngModel)]="employee.post" type="post" class="form-control" id="post" name="post" placeholder="Please enter your post name">
             </div>
           </div>
         </div>
@@ -62,7 +68,7 @@
 
             </div>
             <div class="col-md-10">
-              <textarea [(ngModel)]="employee.address" class="form-control" id="address" name="address"></textarea>
+              <textarea [(ngModel)]="employee.address" class="form-control" id="address" name="address" placeholder="Please enter your address"></textarea>
             </div>
           </div>
         </div>
@@ -80,7 +86,7 @@
           <div class="row">
             <div class="col-md-2"></div>
             <div class="col-md-10 justify-content-center">
-              <button type="submit">Submit</button>
+              <button class="btn-success btn-lg btn-block" type="submit">Submit</button>
             </div>
           </div>
         </div>

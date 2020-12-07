@@ -6,7 +6,12 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./about.component.css']
 })
 export class AboutComponent implements OnInit {
-
+  comment = '';
+  postComment = [];
+  post(): void{
+    this.postComment.push(this.comment);
+    this.comment = '';
+  }
   constructor() { }
 
   ngOnInit(): void {

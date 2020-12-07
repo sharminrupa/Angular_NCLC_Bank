@@ -9,6 +9,7 @@ import { UserService } from 'src/app/service/user.service';
   styleUrls: ['./login.component.css']
 })
 export class LoginComponent implements OnInit {
+  title = 'Login Here';
 
   employee: Employee = new Employee('', '', '', '', '', '', '');
   constructor(private userService: UserService) { }
