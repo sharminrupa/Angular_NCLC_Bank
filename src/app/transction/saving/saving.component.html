@@ -1,7 +1,7 @@
 <div>
   <img src="./assets/img/saving.jpg" class="d-block w-100" alt="...">
   <div class="carousel-caption d-none d-md-block">
-    <h1 class="text-center" style="margin-top: -300px; margin-bottom: 100px;">{{title}}</h1>    
+    <h1 class="text-center" style="margin-top: -350px; margin-bottom: 100px;">{{title}}</h1>    
   </div>
 
 
@@ -9,7 +9,7 @@
     
     <div class="row justify-content-center mt-5" >
         <div class="col-md-6" style="margin-top: -650px;">
-          <form  (ngSubmit)="update()"  #signUp>
+          <form  (ngSubmit)="save()"  #signUp="ngForm">
             <div class="form-group">
               <div class="row">
                 <div class="col-md-3">
@@ -43,7 +43,7 @@
             <div class="row">
               <div class="col-md-3"></div>
               <div class="col-md-9">
-                <button class="btn btn-success btn-lg btn-block" type="update">Saving</button>              
+                <button class="btn btn-success btn-lg btn-block" type="submit">Saving</button>              
               </div>
             </div>
           </form> 

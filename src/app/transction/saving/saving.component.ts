@@ -14,8 +14,8 @@ export class SavingComponent implements OnInit {
   constructor(private http: HttpClient, private route: ActivatedRoute) { }
   ngOnInit(): void {
   }
-  update(){
-    this.http.put<Ttransction>('http://localhost:8080/transction/update', this.transction)
+  save(){
+    this.http.put<Ttransction>('http://localhost:8080/transction/saving', this.transction)
     .subscribe(data => {
       console.log('update success');
     });

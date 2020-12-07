@@ -1,7 +1,7 @@
 <div>
   <img src="./assets/img/withdro.jpg" class="d-block w-100" alt="...">
   <div class="carousel-caption d-none d-md-block">
-    <h1 class="text-center" style="margin-top: -300px; margin-bottom: 100px;">{{title}}</h1>    
+    <h1 class="text-center" style="margin-top: -350px; margin-bottom: 100px;">{{title}}</h1>    
   </div>
 
 
@@ -9,14 +9,14 @@
     
     <div class="row justify-content-center mt-5" >
         <div class="col-md-6" style="margin-top: -500px;">
-          <form  (ngSubmit)="update()"  #signUp>
+          <form (ngSubmit)="withdrow()" #signUp="ngForm">
             <div class="form-group">
               <div class="row">
                 <div class="col-md-3">
                   <label for="accno">Account No: </label>
                 </div>
                 <div class="col-md-9">
-                  <input [(ngModel)]="transction.accno" type="accno" class="form-control" id="accno" name="accno" placeholder="Please enter your account number">
+                  <input  [(ngModel)]="transction.accno"  type="accno" class="form-control" id="accno" name="accno" placeholder="Please enter your account number">
                 </div>
               </div>
             </div>
@@ -26,7 +26,7 @@
                   <label for="amount">Amount: </label>
                 </div>
                 <div class="col-md-9">
-                  <input [(ngModel)]="transction.balance" type="amount" class="form-control" id="amount" name="amount" placeholder="Please enter your amount">
+                  <input  [(ngModel)]="transction.balance"  type="amount" class="form-control" id="amount" name="amount" placeholder="Please enter your withdrow amount">
                 </div>
               </div>           
             </div>
@@ -43,7 +43,7 @@
             <div class="row">
               <div class="col-md-3"></div>
               <div class="col-md-9">
-                <button class="btn btn-success btn-lg btn-block" type="update">Withdrow</button>              
+                <button class="btn btn-success btn-lg btn-block" type="submit">Withdrow</button>              
               </div>
             </div>
           </form> 
