@@ -1,5 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
+import { ToastrService } from 'ngx-toastr';
 import { AccEdit } from 'src/app/model/edit';
 import { Show } from 'src/app/model/show';
 import { ShowService } from 'src/app/service/show.service';
@@ -14,7 +15,7 @@ account: Account;
   accountList: Account[] = [];
   title = 'Customer Details';
  sho: Show = new Show(0, '', '', '', '', '', '');
-  constructor(private show: ShowService) { }
+  constructor(private show: ShowService, private toster: ToastrService) { }
 
   ngOnInit(): void {
     this.getAccountList('');
@@ -34,7 +35,11 @@ account: Account;
 
   delete(id){
     this.show.delete(id).subscribe(data => this.delete);
-
+    if (this.toster != null){
+      this.toster.success('Success', 'Delete success');
+    }else{
+      this.toster.error('Failed', 'Delete failled');
+    }
   }
 
 }

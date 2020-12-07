@@ -1,37 +1,37 @@
 <div>
   <img src="./assets/img/acc_img.png" style="width: 100%;" alt="">
 </div>
-<div class="containe py-5">
+<div class="container py-5">
   <h1 class="text-center mb-5">{{title}}</h1>
   <div class="row justify-content-center">
-    <div class="col-md-6">
+    <div class="col-md-12">
       <form (ngSubmit)="save()" #signUp="ngForm" style="margin-top: 50px;">
         <div class="form-group">
           <div class="row">
-            <div class="col-md-2">
+            <div class="col-md-3">
               <label for="name">Name: </label>
             </div>
-            <div class="col-md-10">
+            <div class="col-md-9">
               <input [(ngModel)]="account.name" type="name" class="form-control" id="name" name="name">
             </div>
           </div>
         </div>
         <div class="form-group">
           <div class="row">
-            <div class="col-md-2">
+            <div class="col-md-3">
               <label for="mobile">Mobile: </label>
             </div>
-            <div class="col-md-10">
+            <div class="col-md-9">
               <input  [(ngModel)]="account.mobile" type="mobile" class="form-control" id="mobile" name="mobile">
             </div>
           </div>
         </div>
         <div class="form-group">
           <div class="row">
-            <div class="col-md-2">
+            <div class="col-md-3">
               <label for="email">Email: </label>
             </div>
-            <div class="col-md-10">
+            <div class="col-md-9">
               <input [(ngModel)]="account.email" type="email" class="form-control" id="email" name="name">
             </div>
           </div>
@@ -39,10 +39,10 @@
 
         <div class="form-group">
           <div class="row">
-            <div class="col-md-2">
+            <div class="col-md-3">
               <label for="gender">Gender: </label>
             </div>
-            <div class="col-md-10">
+            <div class="col-md-9">
               <input [(ngModel)]="account.gender" type="radio" id="gender" name="male" value="Male"> Male 
               <input [(ngModel)]="account.gender" type="radio" id="gender" name="female" value="Female"> Female
             </div>
@@ -51,10 +51,10 @@
 
         <div class="form-group">
           <div class="row">
-            <div class="col-md-2">
+            <div class="col-md-3">
               <label for="education">Education: </label>
             </div>
-            <div class="col-md-10" [(ngModel)]="account.education">
+            <div class="col-md-9" [(ngModel)]="account.education">
               <input type="checkbox" id="education" name="MBA" value="MBA"> MBA  
               <input type="checkbox" id="education" name="BBA" value="BBA"> BBA
             </div>
@@ -62,10 +62,10 @@
         </div>
         <div class="form-group">
           <div class="row">
-            <div class="col-md-2">
+            <div class="col-md-3">
               <label for="acctype">ACC Type: </label>
             </div>
-            <div class="col-md-10">
+            <div class="col-md-9">
               <input [(ngModel)]="account.acctype" type="text" class="form-control" id="acctype" name="acctype">  
               
             </div>
@@ -73,10 +73,10 @@
         </div>
         <div class="form-group">
           <div class="row">
-            <div class="col-md-2">
+            <div class="col-md-3">
               <label for="date">Date: </label>
             </div>
-            <div class="col-md-10">
+            <div class="col-md-9">
 
               <input [(ngModel)]="account.date" type="date" class="form-control" id="date" name="date">
             </div>
@@ -84,22 +84,34 @@
         </div>
         <div class="form-group">
           <div class="row">
-            <div class="col-md-2">
+            <div class="col-md-3">
               <label for="balance">Balance: </label>
             </div>
-            <div class="col-md-10">
+            <div class="col-md-9">
               <input [(ngModel)]="account.openingbalance" type="text" class="form-control" id="balance" name="balance">
             </div>
           </div>
         </div>
-        
+        <div class="from-group mb-3">
+          <div class="row">
+            <div class="col-md-3">
+              <label  for="file">Select Image: </label>
+            </div>
+              <div class="col-md-9">
+                <input #imageInput
+                     type="file"
+                     accept="image/*"
+                     (change)="processFile(imageInput)">            
+              </div>              
+          </div>
+        </div> 
         <div class="form-group">
           <div class="row">
-            <div class="col-md-2">
-              <label for="email">Address: </label>
+            <div class="col-md-3">
+              <label for="address">Address: </label>
 
             </div>
-            <div class="col-md-10">
+            <div class="col-md-9">
               <textarea [(ngModel)]="account.address" class="form-control" id="address" name="address"></textarea>
             </div>
           </div>
@@ -107,8 +119,8 @@
         
         <div class="form-group">
           <div class="row">
-            <div class="col-md-2"></div>
-            <div class="col-md-10 justify-content-center">
+            <div class="col-md-3"></div>
+            <div class="col-md-9 justify-content-center">
               <button class="btn btn-success btn-lg btn-block" type="submit">Submit</button>
             </div>
           </div>

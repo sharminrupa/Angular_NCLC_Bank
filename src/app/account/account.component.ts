@@ -3,6 +3,7 @@ import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { ToastrService } from 'ngx-toastr';
 import { Account } from '../model/account';
+import { ImageService } from '../service/ImageService';
 
 @Component({
   selector: 'app-account',
@@ -10,10 +11,11 @@ import { Account } from '../model/account';
   styleUrls: ['./account.component.css']
 })
 export class AccountComponent implements OnInit {
+  selectedFile: ImageSnippet;
   title = 'Create New Customer Account';
   account: Account = new Account(0, '', '', '', '', '', '', 0, '', '');
   constructor(private http: HttpClient, private router: Router, private toster: ToastrService) { }
-
+  //, private imageService: ImageService
   ngOnInit(): void {
   }
   save(): void{
@@ -28,4 +30,22 @@ export class AccountComponent implements OnInit {
       }
     });
   }
+
+  // processFile(imageInput: any) {
+  //   const file: File = imageInput.files[0];
+  //   const reader = new FileReader();
+
+  //   reader.addEventListener('load', (event: any) => {
+
+  //     this.selectedFile = new ImageSnippet(event.target.result, file);
+
+  //     this.imageService.uploadImage(this.selectedFile.file).subscribe(
+  //       (res) => {
+  //       },
+  //       (err) => {
+  //       });
+  //   });
+
+  //   reader.readAsDataURL(file);
+  // }
 }

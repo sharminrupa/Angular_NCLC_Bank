@@ -90,7 +90,7 @@
   <div class="container py-5">
     <h2>Give Us Your Opinion..........</h2>
     <textarea style="font-size: 25px;" type="text" class="form-control" name="comment" [(ngModel)]="comment" placeholder="Please give your comment"></textarea>
-    <button style="font-size: 25px;" (click)="post()" class="btn btn-info mt-2 float-right">Submit</button>              
+    <button style="font-size: 25px;" (click)="post()" class="btn btn-success mt-2 float-right">Submit</button>              
     <br>
     <div *ngFor = "let commm of postComment">
       <p>{{postComment}}</p>

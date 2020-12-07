@@ -26,9 +26,9 @@ constructor(private http: HttpClient, private router: Router, private toster: To
       console.log('save successfull');
       this.router.navigate(['/login']);
       if (data != null){
-        this.toster.success('Success', 'Login success');
+        this.toster.success('Success', 'Signup success');
       }else{
-        this.toster.error('Failed', 'Login failled');
+        this.toster.error('Failed', 'Signup failled');
       }
     });
   }
