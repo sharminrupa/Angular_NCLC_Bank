@@ -1,11 +1,9 @@
 import { HttpClient } from '@angular/common/http';
-import { Component, OnInit } from '@angular/core';
+import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
+import * as jsPDF from 'jspdf';
 import { Observable } from 'rxjs';
 import { Ttransction } from '../model/saving';
 import { TransctionService } from '../service/transction.service';
-
-
-
 
 @Component({
   selector: 'app-transction',
@@ -31,5 +29,4 @@ export class TransctionComponent implements OnInit {
   searchKeyword(){
     this.getTranstactionList(this.keyword);
   }
-
 }

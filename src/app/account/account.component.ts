@@ -1,3 +1,4 @@
+
 import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
@@ -5,13 +6,16 @@ import { ToastrService } from 'ngx-toastr';
 import { Account } from '../model/account';
 import { ImageService } from '../service/ImageService';
 
+class ImageSnippet {
+  constructor(public src: string, public file: File) {}
+}
 @Component({
   selector: 'app-account',
   templateUrl: './account.component.html',
   styleUrls: ['./account.component.css']
 })
 export class AccountComponent implements OnInit {
-  selectedFile: ImageSnippet;
+ // selectedFile: ImageSnippet;
   title = 'Create New Customer Account';
   account: Account = new Account(0, '', '', '', '', '', '', 0, '', '');
   constructor(private http: HttpClient, private router: Router, private toster: ToastrService) { }
